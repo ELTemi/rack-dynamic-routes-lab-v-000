@@ -9,12 +9,15 @@ class Application
     if req.path.match(/items/)
       item_name = req.path.split("/items/").last
       item = @@items.find {|i| i.name == item_name}
+<<<<<<< HEAD
       if item == nil
         resp.write "Item not found"
         resp.status = 400
       elsif item.name == item_name
         resp.write item.price
       end
+=======
+>>>>>>> f62d4eb3dec980b2cece58e8b3f69505ab60463e
     else
       resp.write "Route not found"
       resp.status = 404
@@ -22,6 +25,7 @@ class Application
     resp.finish
   end
 end
+<<<<<<< HEAD
 
 =begin
 class Application
@@ -48,3 +52,5 @@ class Application
 
 end
 =end
+=======
+>>>>>>> f62d4eb3dec980b2cece58e8b3f69505ab60463e
